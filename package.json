@@ -10,6 +10,9 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -49,8 +52,5 @@
     "semi": false,
     "trailingComma": "es5",
     "endOfLine": "lf"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.0"
   }
 }
