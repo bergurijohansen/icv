@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Grid, Divider, Paper, Typography } from '@material-ui/core'
 import Education from '../education'
+import Data from '../../../assets/data/data'
 
 const AboutMe = () => {
   return (
@@ -22,10 +23,7 @@ const AboutMe = () => {
               style={{ padding: 8 * 3, textAlign: 'justify' }}
               variant="body1"
             >
-              Eg eiti Bergur I. Johansen, eri 30 ár og undir útbúgving. Eg lesið
-              KT-Verkfrøði á Fróðskaparsetri Føroya. Í verandi løtu búgvi eg á
-              Argjum saman við mínari damu og 2 ára gomlu dóttur. Vit eru í
-              gongd við at byggja okkum heim á Norðskála.
+              {Data.personal.aboutMe}
             </Typography>
           </Paper>
           <Divider />

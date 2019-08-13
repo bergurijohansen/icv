@@ -22,8 +22,7 @@ import Battery90 from '@material-ui/icons/Battery90'
 import BatteryFull from '@material-ui/icons/BatteryFull'
 import BatteryChargingFull from '@material-ui/icons/BatteryChargingFull'
 import BatteryCharging50 from '@material-ui/icons/BatteryCharging50'
-import Android from '@material-ui/icons/Android'
-import Web from '@material-ui/icons/Web'
+import Data from '../../../assets/data/data'
 import PrivateRepo from './privateRepo'
 
 function TabContainer(props) {
@@ -68,68 +67,6 @@ const ScrollableTabsButtonAuto = () => {
   function handleChange(event, newValue) {
     setValue(newValue)
   }
-  const ktfak = [
-    {
-      avatar: <Android />,
-      label: 'Android',
-    },
-    {
-      avatar: 'A',
-      label: 'Algorithm',
-    },
-    {
-      avatar: 'C#',
-      label: 'ASP.NET MVC',
-    },
-    {
-      avatar: 'C++',
-      label: 'Objekt-grundað forritan',
-    },
-    {
-      avatar: 'C++',
-      label: 'Objektrættað forritan',
-    },
-    {
-      avatar: 'C++',
-      label: 'Design Patterns',
-    },
-    {
-      avatar: 'DB',
-      label: 'Databasur og SQL',
-    },
-    {
-      avatar: 'F',
-      label: 'Fíggjarstýring',
-    },
-    {
-      avatar: 'J',
-      label: 'Java',
-    },
-    {
-      avatar: 'K',
-      label: 'KT-Trygd',
-    },
-    {
-      avatar: 'KT',
-      label: 'KT-Verkøtlan',
-    },
-    {
-      avatar: 'L',
-      label: 'Lineer algebra',
-    },
-    {
-      avatar: 'R',
-      label: 'Dátuvísindi og hagfrøði við RStudio',
-    },
-    {
-      avatar: 'S',
-      label: 'Stýriskipanir',
-    },
-    {
-      avatar: <Web />,
-      label: 'Innleiðing í Web skipanir',
-    },
-  ]
 
   const KT = e => {
     return (
@@ -145,7 +82,7 @@ const ScrollableTabsButtonAuto = () => {
           !!!To see a list turn to landscape
         </Hidden>
         <Grid container spacing={1}>
-          {ktfak.map((item, index) => {
+          {Data.courses.map((item, index) => {
             return (
               <Hidden only={'xs'}>
                 <Grid xl={4} lg={4} sm={6} item>

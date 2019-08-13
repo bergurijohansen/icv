@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Paper, Typography } from '@material-ui/core'
+import Data from '../../../assets/data/data'
 
 const Contact = () => {
   return (
@@ -22,24 +23,29 @@ const Contact = () => {
         >
           <Grid container justify="space-around">
             <Grid item>
-              <Typography variant="caption">
-                Reynsgøta 11 - 160 Argir
+              <Typography variant="body1">{`${Data.personal.street} ${
+                Data.personal.city
+              }`}</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body1">
+                tlf:{' '}
+                <a href={`tel+${Data.personal.mobilelink}`}>
+                  {Data.personal.moblie}
+                </a>
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="caption">
-                tlf: <a href="tel+00298259934">+298 259934</a>
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">
+              <Typography variant="body1">
                 email:{' '}
-                <a href="mailto:bergurij@gmail.com">bergurij@gmail.com</a>
+                <a href={`mailto:${Data.personal.email}`}>
+                  {Data.personal.email}
+                </a>
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="caption">
-                <a href="https://github.com/bergurijohansen">github</a>
+              <Typography variant="body1">
+                <a href={Data.personal.github}>github</a>
               </Typography>
             </Grid>
           </Grid>
