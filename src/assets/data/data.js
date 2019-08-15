@@ -7,7 +7,7 @@ const data = {
     name: 'Bergur I. Johansen',
     age: 31,
     street: 'Reynsgøta 11',
-    city: 'FO-160 - Argir',
+    city: 'Argir',
     country: 'Faroe Islands',
     mobilelink: '00298259934',
     moblie: '+298 25 99 34',
@@ -17,7 +17,7 @@ const data = {
     instagram: '',
     linkedin: '',
     aboutMe:
-      'Eg eiti Bergur I. Johansen, eri 30 ár og undir útbúgving. Eg lesið KT-Verkfrøði á Fróðskaparsetri Føroya. Í verandi løtu búgvi eg á Argjum saman við mínari damu og 2 ára gomlu dóttur. Vit eru í gongd við at byggja okkum heim á Norðskála.',
+      'Eg eiti Bergur I. Johansen, eri 31 ár og undir útbúgving. Eg lesið KT-Verkfrøði á Fróðskaparsetri Føroya. Í verandi løtu búgvi eg á Argjum saman við mínari damu og 2 ára gomlu dóttur. Vit eru í gongd við at byggja okkum heim á Norðskála.',
     experience: [
       {
         title: 'Prógv',
@@ -58,7 +58,26 @@ const data = {
       link: null,
     },
   ],
-  schoolProjects: [],
+  schoolProjects: [
+    {
+      name: 'Flappy Bird',
+      details:
+        'Lorem ipsum ... bla bla skldjf j jskldfj lksdjf ief iosdjsdijfoi jijoijfio jiajdsfj asdfj iojsdfiojsiofjiosjiisdffioa jijaodjffi jdsiofjijjiosafj iojsdfiojsiofjiosjiisdffioa jijaodjffi jdsiofjijjiosafj iojsdfiojsiofjiosjiisdffioa jijaodjffi jdsiofjijjiosafj hhogsadoif iosdjojidoisjfio asjdiofjsdiofj jfjeiofj4ijj jaosdij eijeoij oasidj iijf iosjiosdjf jiobla',
+      link: null,
+    },
+    {
+      name: 'Dino',
+      details:
+        'Lorem ipsum ... bla bla skldjf j jskldfj lksdjf ief iosdjsdijfoi jijoijfio jiajdsfj asdfj iojsdfiojsiofjiosjiisdffioa jijaodjffi jdsiofjijjiosafj hhogsadoif iosdjojidoisjfio asjdiofjsdiofj jfjeiofj4ijj jaosdij eijeoij oasidj iijf iosjiosdjf jiobla',
+      link: null,
+    },
+    {
+      name: 'Game Engine',
+      details:
+        'Lorem ipsum ... bla bla skldjf j jskldfj lksdjf ief iosdjsdijfoi jijoijfio jiajdsfj asdfj hhogsadoif iosdjojidoisjfio asjdiofjsdiofj jfjeiofj4ijj jaosdij eijeoij oasidj iijf iosjiosdjf jiobla iojsdfiojsiofjiosjiisdffioa jijaodjffi jdsiofjijjiosafj',
+      link: 'https://github.com/bergurijohansen/LudumGameEngine',
+    },
+  ],
   courses: [
     {
       avatar: <Android />,

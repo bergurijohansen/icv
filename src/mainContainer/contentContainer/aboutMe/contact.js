@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Paper, Typography } from '@material-ui/core'
+import { Grid, Hidden, Paper, Typography } from '@material-ui/core'
 import Data from '../../../assets/data/data'
 
 const Contact = () => {
@@ -22,29 +22,32 @@ const Contact = () => {
           variant="body1"
         >
           <Grid container justify="space-around">
-            <Grid item>
-              <Typography variant="body1">{`${Data.personal.street} ${
+            <Grid item xs={12} sm={12} md={3} xl={3} lg={3}>
+              <Typography style={{ textAlign: 'center' }} variant="body1">{`${
                 Data.personal.city
-              }`}</Typography>
+              } - ${Data.personal.country}`}</Typography>
             </Grid>
-            <Grid item>
-              <Typography variant="body1">
-                tlf:{' '}
+            <Hidden only={['xs', 'sm']}>|</Hidden>
+            <Grid item xs={12} sm={5} md={2} xl={3} lg={2}>
+              <Typography style={{ textAlign: 'center' }} variant="body1">
+                {/* tlf:{' '} */}
                 <a href={`tel+${Data.personal.mobilelink}`}>
                   {Data.personal.moblie}
                 </a>
               </Typography>
             </Grid>
-            <Grid item>
-              <Typography variant="body1">
-                email:{' '}
+            <Hidden only={'xs'}>|</Hidden>
+            <Grid item xs={12} sm={5} md={2} xl={3} lg={2}>
+              <Typography style={{ textAlign: 'center' }} variant="body1">
+                {/* email:{' '} */}
                 <a href={`mailto:${Data.personal.email}`}>
                   {Data.personal.email}
                 </a>
               </Typography>
             </Grid>
-            <Grid item>
-              <Typography variant="body1">
+            <Hidden only={['xs', 'sm']}>|</Hidden>
+            <Grid item xs={12} sm={3} md={3} xl={3} lg={2}>
+              <Typography style={{ textAlign: 'center' }} variant="body1">
                 <a href={Data.personal.github}>github</a>
               </Typography>
             </Grid>
