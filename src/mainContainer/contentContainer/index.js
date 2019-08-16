@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import AboutMe from './aboutMe'
 import Experience from './experience'
-import Contact from './aboutMe/contact'
+import Contact from './contact'
 import { Grid } from '@material-ui/core'
 
 const ContentContainer = () => {

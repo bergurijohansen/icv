@@ -1,10 +1,16 @@
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import Typography from '@material-ui/core/Typography'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import {
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  Typography,
+} from '@material-ui/core'
 import Data from '../../../assets/data/data'
 
 const useStyles = makeStyles(theme => ({
@@ -44,15 +50,28 @@ const Education = () => {
                   {item.description || ''}
                 </Typography>
               </ExpansionPanelSummary>
-              {item.values.map(value => {
-                return (
-                  <ExpansionPanelDetails>
-                    <React.Fragment>
-                      <Typography variant="body1">{value}</Typography>
-                    </React.Fragment>
-                  </ExpansionPanelDetails>
-                )
-              })}
+              <Table>
+                <TableBody>
+                  {item.values.map(value => {
+                    return (
+                      <TableRow>
+                        <Grid container>
+                          <Grid sm={4} xs={4} lg={3} xl={3} md={3}>
+                            <TableCell style={{ borderBottomStyle: 'none' }}>
+                              {value.year}
+                            </TableCell>
+                          </Grid>
+                          <Grid sm={8} xs={8} lg={9} xl={9} md={9}>
+                            <TableCell style={{ borderBottomStyle: 'none' }}>
+                              {value.description}
+                            </TableCell>
+                          </Grid>
+                        </Grid>
+                      </TableRow>
+                    )
+                  })}
+                </TableBody>
+              </Table>
             </ExpansionPanel>
           </React.Fragment>
         )

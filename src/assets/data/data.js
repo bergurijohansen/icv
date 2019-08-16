@@ -23,24 +23,42 @@ const data = {
         title: 'Prógv',
         description: 'Skúlar og skeiðir',
         values: [
-          '1995 - 2005: Argjaskúli',
-          '2005 - 2008: HTX á Tekniska Studentarskúla í Klaksvík',
-          '2016 - 2019: KT-Verkfróði á Fróðskaparsetur Føroya',
+          { year: '1995 - 2005', description: 'Argjaskúli' },
+          {
+            year: '2005 - 2008',
+            description: 'HTX á Tekniska Studentarskúla í Klaksvík',
+          },
+          {
+            year: '2016 - 2019',
+            description: 'KT-Verkfrøði á Fróðskaparsetur Føroya',
+          },
         ],
       },
       {
         title: 'Arbeiði',
         description: 'Arbeiðs royndir',
         values: [
-          '2006 - 2008: Arbeidi lestrarstarv hjá Kósini meðan eg gekk í skúla.',
-          '2008 - 2016: Arbeidi hjá VestSalmon sum seinri varð keypt av Bakkafrosti.',
-          '2018 - : Lestrar starv hjá TechCare',
+          {
+            year: '2006 - 2008',
+            description:
+              'Arbeidi lestrarstarv hjá Kósini meðan eg gekk í skúla.',
+          },
+          { year: '2007', description: 'Barrvørður á Hotel Føroyum' },
+          {
+            year: '2008 - 2016',
+            description:
+              'Arbeidi hjá VestSalmon sum seinri varð keypt av Bakkafrosti.',
+          },
+          { year: '2018 -', description: 'Lestrar starv hjá TechCare' },
         ],
       },
       {
         title: 'Eyka',
         description: 'Loyvisbrøv v.m.',
-        values: ['Koyrikort B', 'Trukk loyvi'],
+        values: [
+          { year: null, description: 'Koyrikort B' },
+          { year: null, description: 'Trukk loyvi' },
+        ],
       },
     ],
   },
