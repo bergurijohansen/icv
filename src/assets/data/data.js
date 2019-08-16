@@ -108,8 +108,16 @@ const data = {
       label: 'Databasur og SQL',
     },
     {
+      avatar: 'DS',
+      label: 'Descrete Støddfrøði',
+    },
+    {
       avatar: 'F',
       label: 'Fíggjarstýring',
+    },
+    {
+      avatar: <Web />,
+      label: 'Innleiðing í Web skipanir',
     },
     {
       avatar: 'J',
@@ -134,10 +142,6 @@ const data = {
     {
       avatar: 'S',
       label: 'Stýriskipanir',
-    },
-    {
-      avatar: <Web />,
-      label: 'Innleiðing í Web skipanir',
     },
   ],
 }

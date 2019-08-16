@@ -61,7 +61,8 @@ const ScrollableTabsButtonAuto = () => {
           indicatorColor="primary"
           style={{ backgroundColor: '#FFFFFF' }}
           textColor="primary"
-          variant="scrollable"
+          variant="fullWidth"
+          centered
           scrollButtons="auto"
         >
           <Tab label="KT" />
