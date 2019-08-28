@@ -1,10 +1,17 @@
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import Typography from '@material-ui/core/Typography'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import {
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  Typography,
+} from '@material-ui/core'
+import Data from '../../../assets/data/data'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,87 +31,51 @@ const useStyles = makeStyles(theme => ({
 
 const Education = () => {
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
-
-  const handleChange = panel => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false)
-  }
 
   return (
     <div className={classes.root}>
-      <ExpansionPanel
-        expanded={expanded === 'panel1'}
-        onChange={handleChange('panel1')}
-      >
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography className={classes.heading}>Prógv</Typography>
-          <Typography className={classes.secondaryHeading}>
-            Skúlar og skeiðir
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography variant="body1">
-            1995 - 2005: Argjaskúli <br />
-            2005 - 2008: HTX á Tekniska Studentarskúla í Klaksvík <br />
-            2016 - 2019: KT-Verkfróði á Fróðskaparsetur Føroya <br />
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel
-        expanded={expanded === 'panel2'}
-        onChange={handleChange('panel2')}
-      >
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2bh-content"
-          id="panel2bh-header"
-        >
-          <Typography className={classes.heading}>Arbeiði</Typography>
-          <Typography className={classes.secondaryHeading}>
-            Arbeiðs royndir
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            2006 - 2008: Arbeidi lestrarstarv hjá Kósini meðan eg gekk í skúla.
-            <br />
-            2008 - 2016: Arbeidi hjá VestSalmon sum seinri varð keypt av
-            Bakkafrosti.
-            <br />
-            2018- : Lestrar starv hjá TechCare
-            <br />
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel
-        expanded={expanded === 'panel3'}
-        onChange={handleChange('panel3')}
-      >
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
-        >
-          <Typography className={classes.heading}>Eyka</Typography>
-          <Typography className={classes.secondaryHeading}>
-            Loyvisbrøv v.m.
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <ul>
-            <li>
-              <Typography>Koyrikort</Typography>
-            </li>
-            <li>
-              <Typography>Trukk loyvi</Typography>
-            </li>
-          </ul>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+      {Data.personal.experience.map((item, index) => {
+        return (
+          <React.Fragment key={index}>
+            <ExpansionPanel key={index}>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                <Typography className={classes.heading}>
+                  {item.title}
+                </Typography>
+                <Typography className={classes.secondaryHeading}>
+                  {item.description || ''}
+                </Typography>
+              </ExpansionPanelSummary>
+              <Table>
+                <TableBody>
+                  {item.values.map((value, idx) => {
+                    return (
+                      <TableRow key={idx+value}>
+                        <Grid container>
+                          <Grid sm={4} xs={4} lg={3} xl={3} md={3} item>
+                            <TableCell style={{ borderBottomStyle: 'none' }}>
+                              {value.year}
+                            </TableCell>
+                          </Grid>
+                          <Grid sm={8} xs={8} lg={9} xl={9} md={9} item>
+                            <TableCell style={{ borderBottomStyle: 'none' }}>
+                              {value.description}
+                            </TableCell>
+                          </Grid>
+                        </Grid>
+                      </TableRow>
+                    )
+                  })}
+                </TableBody>
+              </Table>
+            </ExpansionPanel>
+          </React.Fragment>
+        )
+      })}
     </div>
   )
 }
