@@ -8,6 +8,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import { Tab } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import Language from '../../../helpers/language'
 
 function TabContainer(props) {
   return (
@@ -65,7 +66,7 @@ const ScrollableTabsButtonAuto = () => {
           centered
           scrollButtons="auto"
         >
-          <Tab label="KT" />
+          <Tab label={Language('words', 'it')} />
           <Tab label="Privat projectir" />
           <Tab label="Skúla uppgávur" />
         </Tabs>

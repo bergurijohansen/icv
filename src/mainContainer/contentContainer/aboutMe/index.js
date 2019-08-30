@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Grid, Divider, Paper, Typography } from '@material-ui/core'
 import Education from '../education'
 import Data from '../../../assets/data/data'
+import Language from '../../../helpers/language'
 
 const AboutMe = () => {
   return (
@@ -17,13 +18,14 @@ const AboutMe = () => {
         <Grid lg={8} xl={8} md={8} sm={6} xs={12} item>
           <Paper>
             <Typography style={{ textAlign: 'center' }} variant="h4">
-              Um meg
+              {Language('personal', 'aboutMe')}
             </Typography>
             <Typography
               style={{ padding: 8 * 3, textAlign: 'justify' }}
               variant="body1"
             >
-              {Data.personal.aboutMe}
+              {/* {Data.personal.aboutMe} */}
+              {Language('personal','aboutMeDetails')}
             </Typography>
           </Paper>
           <Divider />
